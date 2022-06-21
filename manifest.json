@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "searchBlock",
+  "version": "1.0.0",
+  "description": "searchBlock",
+  "icons": {
+    "16": "./public/icon/icon.svg"
+  },
+  "action": {
+    "default_icon": "./public/icon/icon.png",
+    "default_popup": "./src/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/*",
+        "chrome-untrusted://new-tab-page/"
+      ],
+      "js": ["src/popup.js"]
+    }
+  ]
+}
