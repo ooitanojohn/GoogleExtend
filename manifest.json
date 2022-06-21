@@ -4,18 +4,18 @@
   "version": "1.0.0",
   "description": "searchBlock",
   "icons": {
-    "16": "./public/icon/icon.svg"
+    "16": "./public/icon/icon.png",
+    "32": "./public/icon/icon.png",
+    "48": "./public/icon/icon.png",
+    "128": "./public/icon/icon.png"
   },
   "action": {
-    "default_icon": "./public/icon/icon.png",
+    "default_icon": "./public/icon/favicon.png",
     "default_popup": "./src/popup.html"
   },
   "content_scripts": [
     {
-      "matches": [
-        "https://www.google.com/*",
-        "chrome-untrusted://new-tab-page/"
-      ],
+      "matches": ["https://www.google.com/*", "https://new-tab-page/"],
       "js": ["src/popup.js"]
     }
   ]
