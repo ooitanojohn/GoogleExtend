@@ -4,19 +4,23 @@
   "version": "1.0.0",
   "description": "searchBlock",
   "icons": {
-    "16": "./public/icon/icon.png",
-    "32": "./public/icon/icon.png",
-    "48": "./public/icon/icon.png",
-    "128": "./public/icon/icon.png"
+    "16": "./icon/icon.png",
+    "32": "./icon/icon.png",
+    "48": "./icon/icon.png",
+    "128": ".//icon/icon.png"
   },
   "action": {
-    "default_icon": "./public/icon/favicon.png",
+    "default_icon": "./icon/favicon.png",
     "default_popup": "./src/popup.html"
   },
   "content_scripts": [
     {
-      "matches": ["https://www.google.com/*", "https://new-tab-page/"],
-      "js": ["src/popup.js"]
+      "matches": [
+        "https://www.google.com/search*",
+        "https://www.google.com/webhp*"
+      ],
+      "js": ["src/wordBlock.js"]
     }
-  ]
+  ],
+  "permissions": ["storage"]
 }
